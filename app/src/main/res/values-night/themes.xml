@@ -1,0 +1,39 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.NanoPost" parent="Theme.Material3.DayNight">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/coldGreen2</item>
+        <item name="colorOnPrimary">@color/coldGreen2_dark</item>
+        <item name="colorPrimaryContainer">@color/coldGreen2_dl</item>
+        <item name="colorOnPrimaryContainer">@color/coldGreen1_light</item>
+        <item name="colorPrimarySurface">@color/coldGreen2_Surface</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/warmGreen2</item>
+        <item name="colorOnSecondary">@color/warmGreen2_dark</item>
+        <item name="colorSecondaryContainer">@color/warmGreen2_dl</item>
+        <item name="colorOnSecondaryContainer">@color/warmGreen1_light</item>
+        <!-- Tertiary brand color. -->
+        <item name="colorTertiary">@color/coldRed2</item>
+        <item name="colorOnTertiary">@color/coldRed2_dark</item>
+        <item name="colorTertiaryContainer">@color/coldRed2_dl</item>
+        <item name="colorOnTertiaryContainer">@color/coldRed1_light</item>
+        <!-- Error brand color. -->
+        <item name="colorError">@color/warmRed2</item>
+        <item name="colorOnError">@color/warmRed2_dark</item>
+        <item name="colorErrorContainer">@color/warmRed2_dl</item>
+        <item name="colorOnErrorContainer">@color/warmRed1_light</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">?attr/colorPrimary</item>
+        <!-- Customize your theme here. -->
+        <item name="backgroundColor">@color/background_dark</item>
+        <item name="colorOutline">@color/gray_light</item>
+        <item name="dividerColor">@color/blue_gray_dark</item>
+        <item name="colorOnSurfaceVariant">@color/gray_80</item>
+        <item name="colorSurface">?backgroundColor</item>
+        <item name="colorOnSurface">@color/onSurfaceDark</item>
+        <item name="textAppearanceLabelLarge">@style/TextAppearance.Material3.LabelLarge</item>
+        <item name="colorSurfaceContainerHighest">@color/neutral20</item>
+    </style>
+</resources>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Nano Post</string>
+    <string name="subscribe">Подписаться</string>
+    <string name="edit">Редактировать</string>
+    <string name="profile">Профиль</string>
+    <string name="post">Пост</string>
+    <string name="images">Фото</string>
+    <string name="feed">Новости</string>
+    <string name="logout">Выход</string>
+    <string name="unsubscribe">Отписаться</string>
+    <string name="adding_post">Добавление поста...</string>
+    <string name="username">Логин</string>
+    <string name="Continue">Продолжить</string>
+    <string name="password">Пароль</string>
+    <string name="sec_password">Подтвердите пароль</string>
+    <string name="sign_in">Войти</string>
+    <string name="register">Зарегистрироваться</string>
+    <string name="login_tooShort">Логин должен быть длиннее 2 символов</string>
+    <string name="login_tooLong">Логин должен быть короче 17 символов</string>
+    <string name="login_InvalidCharacters">Логин может содержать только символы \'a\'-\'z\',\'_\', \'.\'</string>
+    <string name="password_tooShort">Пароль должен быть длиннее 7 символов</string>
+    <string name="password_notConfirm">Пароли не совпадают</string>
+    <string name="delete">Удалить</string>
+</resources>

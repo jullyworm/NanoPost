@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Nano Post</string>
+    <string name="subscribe">Subscribe</string>
+    <string name="unsubscribe">Unsubscribe</string>
+    <string name="edit">Edit</string>
+    <string name="profile">Profile</string>
+    <string name="post">Post</string>
+    <string name="images">Images</string>
+    <string name="feed">Feed</string>
+   <string name="logout">Logout</string>
+    <string name="adding_post">Adding post…</string>
+    <string name="username">Username</string>
+    <string name="Continue">Continue</string>
+    <string name="password">Password</string>
+    <string name="sec_password">Confirm password</string>
+    <string name="sign_in">Sign in</string>
+    <string name="register">Register</string>
+    <string name="login_tooShort">Username must be longer than 2 characters</string>
+    <string name="login_tooLong">Username must be shorter than 17 characters</string>
+    <string name="login_InvalidCharacters">Username must contain only the characters \'a\'-\'z\',\'_\', \'.\'</string>
+    <string name="password_tooShort">Password must be longer then 7 characters</string>
+    <string name="password_notConfirm">Passwords do not match</string>
+    <string name="delete">Delete</string>
+</resources>

@@ -1,0 +1,38 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.NanoPost" parent="Theme.Material3.DayNight">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/coldGreen1</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorPrimaryContainer">@color/coldGreen1_light</item>
+        <item name="colorOnPrimaryContainer">@color/coldGreen1_dark</item>
+        <item name="colorPrimarySurface">@color/coldGreen1_Surface</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/warmGreen1</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="colorSecondaryContainer">@color/warmGreen1_light</item>
+        <item name="colorOnSecondaryContainer">@color/warmGreen1_dark</item>
+        <!-- Tertiary brand color. -->
+        <item name="colorTertiary">@color/coldRed1</item>
+        <item name="colorOnTertiary">@color/white</item>
+        <item name="colorTertiaryContainer">@color/coldRed1_light</item>
+        <item name="colorOnTertiaryContainer">@color/coldRed1_dark</item>
+        <!-- Error brand color. -->
+        <item name="colorError">@color/warmRed1</item>
+        <item name="colorOnError">@color/white</item>
+        <item name="colorErrorContainer">@color/warmRed1_light</item>
+        <item name="colorOnErrorContainer">@color/warmRed1_dark</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">?attr/colorPrimary</item>
+        <!-- Customize your theme here. -->
+        <item name="backgroundColor">@color/background_light</item>
+        <item name="colorOutline">@color/gray_dark</item>
+        <item name="dividerColor">@color/blue_gray</item>
+        <item name="colorOnSurfaceVariant">@color/blue_gray_dark</item>
+        <item name="colorSurface">?backgroundColor</item>
+        <item name="colorOnSurface">@color/onSurfaceLight</item>
+        <item name="colorSurfaceContainerHighest">@color/neutral90</item>
+    </style>
+</resources>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#FFFFFFFF</color>
+    <color name="onSurfaceDark">#C6C7C1</color>
+    <color name="onSurfaceLight">#1A1C19</color>
+    <!-- Theme colors light -->
+    <color name="background_light">#FCFDF6</color>
+    <color name="blue_gray">#DEE5D8</color>
+    <color name="blue_gray_dark">#424940</color>
+    <color name="gray_dark">#72796F</color>
+    <color name="coldGreen1">#006E1C</color>
+    <color name="coldGreen1_Surface">#0D006E1C</color>
+    <color name="warmGreen1">#636100</color>
+    <color name="coldRed1">#AB2A64</color>
+    <color name="warmRed1">#BA1A1A</color>
+    <color name="coldGreen1_light">#94F990</color>
+    <color name="warmGreen1_light">#EBE86E</color>
+    <color name="coldRed1_light">#FFD9E3</color>
+    <color name="warmRed1_light">#FFDAD6</color>
+    <color name="coldGreen1_dark">#002204</color>
+    <color name="warmGreen1_dark">#1D1D00</color>
+    <color name="coldRed1_dark">#3E001E</color>
+    <color name="warmRed1_dark">#410002</color>
+    <color name="neutral90">#DEE5D8</color>
+    <!-- Theme colors dark -->
+    <color name="background_dark">#1A1C19</color>
+    <color name="gray_80">#C2C9BD</color>
+    <color name="gray_light">#8C9388</color>
+    <color name="coldGreen2">#78DC77</color>
+    <color name="coldGreen2_Surface">#0D78DC77</color>
+    <color name="warmGreen2">#CECB55</color>
+    <color name="coldRed2">#FFB0C9</color>
+    <color name="warmRed2">#FFB4AB</color>
+    <color name="coldGreen2_dark">#00390A</color>
+    <color name="warmGreen2_dark">#333200</color>
+    <color name="coldRed2_dark">#640034</color>
+    <color name="warmRed2_dark">#690005</color>
+    <color name="coldGreen2_dl">#005313</color>
+    <color name="warmGreen2_dl">#4A4900</color>
+    <color name="coldRed2_dl">#8B0B4C</color>
+    <color name="warmRed2_dl">#93000A</color>
+    <color name="neutral20">#2C322A</color>
+</resources>
