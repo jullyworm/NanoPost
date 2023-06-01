@@ -21,12 +21,14 @@ class PreferencesRepositoryImpl @Inject constructor(
     override fun addToken(token: String) {
         sharedPreferences.edit {
             putString(KEY_ACCESS_TOKEN, token)
+            commit()
         }
     }
 
     override fun deleteToken() {
         sharedPreferences.edit {
             remove(KEY_ACCESS_TOKEN)
+            commit()
         }
     }
 
@@ -37,12 +39,14 @@ class PreferencesRepositoryImpl @Inject constructor(
     override fun addUserId(userId: String) {
         sharedPreferences.edit {
             putString(KEY_USER_TOKEN, userId)
+            commit()
         }
     }
 
     override fun deleteUserId() {
         sharedPreferences.edit {
             remove(KEY_USER_TOKEN)
+            commit()
         }
     }
 }

@@ -5,15 +5,11 @@ import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView.LayoutManager
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import by.kirich1409.viewbindingdelegate.viewBinding
 import com.example.nanopost.presentation.adapters.ImagesPagingDataAdapter
 import com.example.nanopost.R
-import com.example.nanopost.databinding.FragmentFeedBinding
 import com.example.nanopost.databinding.FragmentImagesBinding
-import com.example.nanopost.presentation.profile.ProfileFragmentDirections
 
 class ImagesFragment: Fragment(R.layout.fragment_images) {
 
@@ -34,7 +30,7 @@ class ImagesFragment: Fragment(R.layout.fragment_images) {
             adapter = imagesAdapter.apply {
                 onItemClick = {
                     findNavController().navigate(
-                        ImagesFragmentDirections.actionImagesFragmentToImageFragment2(it.id)
+                        ImagesFragmentDirections.actionImagesFragmentToImageFragment(it.id)
                     )
                 }
             }

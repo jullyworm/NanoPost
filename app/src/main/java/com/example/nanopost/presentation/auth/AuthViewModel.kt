@@ -5,14 +5,11 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.nanopost.data.models.CheckUsernameResult
-import com.example.nanopost.data.models.request.RegistrationRequest
 import com.example.nanopost.data.models.response.TokenResponse
 import com.example.nanopost.domain.auth.*
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import okhttp3.Dispatcher
-import retrofit2.HttpException
 import javax.inject.Inject
 
 @HiltViewModel
@@ -30,37 +27,20 @@ class AuthViewModel @Inject constructor(
     private val _authLiveData = MutableLiveData<TokenResponse?>()
     val authLiveData: LiveData<TokenResponse?> = _authLiveData
 
-    private val _errLiveData = MutableLiveData<Exception>()
-    val errLiveData: LiveData<Exception> = _errLiveData
-
     fun authorize(username: String, password: String){
-            //try {
         viewModelScope.launch(Dispatchers.IO) {
             _authLiveData.postValue(authorizeUseCase(username, password))
+            _authLiveData.value?.let { addTokenUseCase(it.token) }
+            _authLiveData.value?.let{ addUserIdUserCase(it.userId)}
         }
-                _authLiveData.value?.let { addTokenUseCase(it.token) }
-                _authLiveData.value?.let{ addUserIdUserCase(it.userId)}
-           /* }
-            catch (e: HttpException){
-                _errLiveData.postValue(e)
-                throw e
-            }*/
 
     }
     fun register(username: String, password: String){
-        //try {
         viewModelScope.launch(Dispatchers.IO) {
             _authLiveData.postValue(registerUseCase(username, password))
-
+            _authLiveData.value?.let { addTokenUseCase(it.token) }
+            _authLiveData.value?.let{ addUserIdUserCase(it.userId)}
         }
-        _authLiveData.value?.let { addTokenUseCase(it.token) }
-        _authLiveData.value?.let{ addUserIdUserCase(it.userId)}
-
-        //}
-        /*catch (e: HttpException){
-            _errLiveData.postValue(e)
-            throw e
-        }*/
     }
 
     fun checkUsername(username: String){

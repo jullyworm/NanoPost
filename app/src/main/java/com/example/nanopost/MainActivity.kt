@@ -11,16 +11,12 @@ import android.view.WindowManager
 import androidx.activity.viewModels
 import androidx.annotation.RequiresApi
 import androidx.core.view.WindowCompat
-import androidx.fragment.app.viewModels
-import androidx.navigation.findNavController
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.NavHostFragment
-import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.setupActionBarWithNavController
-import androidx.navigation.ui.setupWithNavController
 import by.kirich1409.viewbindingdelegate.viewBinding
 import com.example.nanopost.databinding.ActivityMainBinding
-import com.example.nanopost.databinding.FragmentFeedBinding
-import com.example.nanopost.presentation.profile.ProfileViewModel
+import com.example.nanopost.presentation.feed.FeedFragment
+import com.example.nanopost.presentation.profile.ProfileFragment
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -34,7 +30,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        /*if (Build.VERSION.SDK_INT in 21..29) {
+       if (Build.VERSION.SDK_INT in 21..29) {
             window.statusBarColor = Color.TRANSPARENT
             window.navigationBarColor = Color.TRANSPARENT
             window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
@@ -46,29 +42,51 @@ class MainActivity : AppCompatActivity() {
             window.statusBarColor = Color.TRANSPARENT
             window.navigationBarColor = Color.TRANSPARENT
             WindowCompat.setDecorFitsSystemWindows(window, false)
-        }*/
+        }
 
         val navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_fragment) as NavHostFragment
         val navController = navHostFragment.navController
 
         viewModel.getToken()
 
+        val feedFragment = FeedFragment()
+        val profileFragment = ProfileFragment()
+
+
         navController.addOnDestinationChangedListener { _, dest, _ ->
             when (dest.id) {
-                R.id.authFragment, R.id.createPostFragment, R.id.createPostFragment2, R.id.imageFragment2 -> binding.navView.visibility = GONE
-                else -> binding.navView.visibility = VISIBLE
+                R.id.authFragment, R.id.createPostFragment, R.id.imageFragment -> binding.navView.visibility = GONE
+                else ->{
+                    binding.navView.visibility = VISIBLE
+                    binding.navView.setOnItemSelectedListener {
+                        when(it.itemId){
+                            R.id.profile -> {
+                                setCurrentFragment(profileFragment)
+                            }
+                            R.id.feed -> {
+                                setCurrentFragment(feedFragment)
+                            }
+                        }
+                        true
+                    }
+                }
             }
         }
 
         viewModel.tokenLiveData.observe(this) {
-            val navGraph = if (it != null) {
-                navController.navInflater.inflate(R.navigation.nav_graph_main)
-            } else {
-                navController.navInflater.inflate(R.navigation.nav_graph_auth)
+            if (it != null) {
+                navController.graph.setStartDestination(R.id.feedFragment)
+            }
+            else {
+                navController.graph.setStartDestination(R.id.authFragment)
             }
 
-            navController.graph = navGraph
-            binding.navView.setupWithNavController(navController)
         }
+
     }
+    private fun setCurrentFragment(fragment:Fragment)=
+        supportFragmentManager.beginTransaction().apply {
+            replace(R.id.nav_fragment,fragment)
+            commit()
+        }
 }

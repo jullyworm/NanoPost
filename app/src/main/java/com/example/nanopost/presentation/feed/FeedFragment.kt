@@ -2,8 +2,6 @@ package com.example.nanopost.presentation.feed
 
 import android.os.Bundle
 import android.view.View
-import android.view.ViewGroup
-import androidx.core.view.*
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
@@ -42,27 +40,9 @@ class FeedFragment: Fragment(R.layout.fragment_feed) {
 
         binding.fab.setOnClickListener{
             findNavController().navigate(
-                FeedFragmentDirections.actionFeedFragmentToCreatePostFragment2()
+                FeedFragmentDirections.actionFeedFragmentToCreatePostFragment()
             )
         }
-
-       /* binding.root.setOnApplyWindowInsetsListener { v, i ->
-            val insets = WindowInsetsCompat.toWindowInsetsCompat(i)
-            val bottomInset = insets.getInsets(WindowInsetsCompat.Type.systemBars()).bottom
-            var bottomPadding = 0
-            binding.fab.updateLayoutParams<ViewGroup.MarginLayoutParams> {
-                updateMargins(
-                    bottom = bottomMargin + bottomInset/2,
-                )
-                bottomPadding = bottomMargin + topMargin
-            }
-            binding.fab.doOnPreDraw {
-                binding.recycler.updatePadding(
-                    bottom = binding.fab.height + bottomPadding,
-                )
-            }
-            i
-        }*/
     }
 
 }

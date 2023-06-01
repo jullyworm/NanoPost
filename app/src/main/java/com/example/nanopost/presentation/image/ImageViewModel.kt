@@ -5,9 +5,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.nanopost.data.models.Image
-import com.example.nanopost.data.models.Post
 import com.example.nanopost.domain.images.GetImageUseCase
-import com.example.nanopost.domain.post.GetPostUseCase
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 

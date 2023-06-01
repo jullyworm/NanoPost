@@ -7,9 +7,7 @@ import androidx.lifecycle.viewModelScope
 import androidx.paging.PagingData
 import androidx.paging.cachedIn
 import com.example.nanopost.data.models.Image
-import com.example.nanopost.data.models.Post
 import com.example.nanopost.domain.auth.GetUserIdUseCase
-import com.example.nanopost.domain.images.GetImageUseCase
 import com.example.nanopost.domain.images.GetImagesUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch

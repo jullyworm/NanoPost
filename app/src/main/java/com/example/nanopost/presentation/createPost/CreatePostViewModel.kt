@@ -4,7 +4,6 @@ import android.net.Uri
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.example.nanopost.data.models.Image
 import com.example.nanopost.domain.images.PutImageUseCase
 import com.example.nanopost.domain.post.CreatePostUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel

@@ -2,10 +2,8 @@ package com.example.nanopost.presentation.createPost
 
 import android.os.Bundle
 import android.view.View
-import android.view.ViewGroup
 import androidx.activity.result.PickVisualMediaRequest
 import androidx.activity.result.contract.ActivityResultContracts
-import androidx.core.view.*
 import androidx.core.widget.doAfterTextChanged
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
@@ -14,7 +12,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import by.kirich1409.viewbindingdelegate.viewBinding
 import com.example.nanopost.R
 import com.example.nanopost.databinding.FragmentCreatePostBinding
-import com.example.nanopost.presentation.adapters.ImagesAdapter
 import com.example.nanopost.presentation.adapters.ImagesAdderAdapter
 import dagger.hilt.android.AndroidEntryPoint
 

@@ -11,7 +11,6 @@ import by.kirich1409.viewbindingdelegate.viewBinding
 import com.example.nanopost.R
 import com.example.nanopost.data.models.CheckUsernameResult
 import com.example.nanopost.databinding.FragmentAuthBinding
-import com.google.android.material.snackbar.Snackbar
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -68,8 +67,9 @@ class AuthFragment: Fragment(R.layout.fragment_auth) {
                     viewModel.authorize(login, password)
                     binding.password.endIconDrawable = null
                     binding.password.helperText = null
-                    val navController = findNavController()
-                    navController.graph = navController.navInflater.inflate(R.navigation.nav_graph_main)
+                    findNavController().navigate(
+                        AuthFragmentDirections.actionAuthFragmentToFeedFragment()
+                    )
                 }
                 else{
                     binding.password.setEndIconDrawable(R.drawable.baseline_error_24)
@@ -87,8 +87,9 @@ class AuthFragment: Fragment(R.layout.fragment_auth) {
                     binding.password.helperText = null
                     binding.secondPassword.endIconDrawable = null
                     binding.secondPassword.helperText = null
-                    val navController = findNavController()
-                    navController.graph = navController.navInflater.inflate(R.navigation.nav_graph_main)
+                    findNavController().navigate(
+                            AuthFragmentDirections.actionAuthFragmentToFeedFragment()
+                        )
                 }
                 else {
                     binding.secondPassword.setEndIconDrawable(R.drawable.baseline_error_24)
@@ -100,10 +101,5 @@ class AuthFragment: Fragment(R.layout.fragment_auth) {
                 binding.password.helperText = getString(R.string.password_tooShort)
             }
         }
-
-       /* viewModel.errLiveData.observe(viewLifecycleOwner){err ->
-            Snackbar.make(view, err.message.toString(), Snackbar.LENGTH_LONG)
-                .show();
-        }*/
     }
 }

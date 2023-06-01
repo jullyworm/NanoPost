@@ -1,6 +1,5 @@
 package com.example.nanopost.presentation.adapters
 
-import android.view.View.GONE
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
@@ -40,16 +39,16 @@ class PagingDataAdapter: androidx.paging.PagingDataAdapter<Post, PagingDataAdapt
         fun bind(item: Post) {
             binding.contentHeader.text = item.owner.username
             binding.contentText.text = item.text
-            binding.contentImage1.visibility = GONE
-            //binding.contentImage2.visibility = GONE
-            //binding.contentImage3.visibility = GONE
-            //binding.contentImage4.visibility = GONE
+            binding.contentImage1.load(item.images[0].sizes.first().url)
             binding.contentMonogram.load(item.owner.avatarUrl)
             val date = Date(item.dateCreater.toLong())
             binding.contentTime.text = date.toString()
             binding.root.setOnClickListener {
                 onItemClick(item)
             }
+            binding.favoriteButton.text = item.likes.likesCount.toString()
+            if(item.likes.liked) binding.favoriteButton.setIconResource(R.drawable.baseline_favorite_24)
+            else binding.favoriteButton.setIconResource(R.drawable.baseline_favorite_border_24)
         }
 
     }

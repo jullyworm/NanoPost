@@ -9,7 +9,6 @@ import by.kirich1409.viewbindingdelegate.viewBinding
 import coil.load
 import com.example.nanopost.R
 import com.example.nanopost.databinding.FragmentPostBinding
-import com.example.nanopost.presentation.images.ImagesFragmentDirections
 import java.util.*
 
 class PostFragment : Fragment(R.layout.fragment_post) {
